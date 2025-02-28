@@ -1,0 +1,240 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up full height */
+    margin-bottom: 0; /* Remove any margin below the body */
+}
+
+/* Header Section */
+header {
+    background-color: #efeded;
+    padding: 4px 8px; /* Add padding to the header */
+}
+
+/* Flexbox Layout for Top Right Section */
+.top-right {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Vertically center the items */
+    gap: 20px; /* Add space between elements */
+}
+
+/* Style for the Links */
+.top-right a {
+    text-decoration: none;
+    font-size: 10px;
+    color: #5f6368; /* Set the color of the links */
+}
+
+/* Style for the Menu Icon */
+.top-right .bar-icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Style for the Sign In Button */
+.top-right .sign-in {
+    padding: 1px 8px;
+    font-size: 10px;
+    background-color: rgb(118, 126, 218);
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+/* Optional: Add a hover effect on Sign In button */
+.top-right .sign-in:hover {
+    background-color: #e8e8e8;
+}
+
+/* Image Section */
+.image-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title-image {
+    max-width: 140px;
+    height: auto;
+    display: inline-block;
+}
+
+/* Container for the search bar */
+.search-container {
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+    align-items: center;     /* Vertically align items in the middle */
+    margin: 8px 0;
+}
+
+/* Container that holds the search bar and icons */
+.search-bar-container {
+    display: flex;
+    align-items: center;  /* Vertically align the items inside */
+    width: 90%;           /* Make the search bar width more responsive */
+    max-width: 380px;     /* Limit the max width */
+    background-color: #fff; /* Light background for the search bar */
+    padding: 0 5px;        /* Adjust padding */
+    border-radius: 30px;  /* Rounded corners for the entire container */
+    border: 1px solid #dcdcdc; /* Light border for the search bar */
+    overflow: hidden;      /* Prevent overflow */
+}
+
+/* Styling for the search icon inside the search bar */
+.search-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px; /* Space between the left edge and the icon */
+    margin-top: 2px;
+}
+
+/* Styling for the search bar (input field) */
+.search-bar {
+    width: 100%;            /* The input field will take up all available space */
+    height: 30px;           /* Height of the input field */
+    padding: 0 10px;        /* Padding for text inside the input field */
+    font-size: 14px;        /* Font size for text inside the input */
+    border: none;           /* Remove the default border */
+    outline: none;          /* Remove the default outline */
+    border-radius: 20px;    /* Rounded corners for the input field */
+}
+
+/* Styling for the microphone and Google Lens icons inside the search bar */
+.mic-icon,
+.google-lens-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Space between the icons and the right edge */
+    cursor: pointer;    /* Add a pointer cursor to indicate the icons are clickable */
+}
+
+/* Search buttons below the search bar */
+.search-buttons {
+    display: flex;
+    justify-content: center;  /* Center the buttons horizontally */
+    gap: 20px;                /* Space between buttons */
+    margin-top: 20px;         /* Add space between the search bar and buttons */
+}
+
+/* Style for individual buttons */
+.search-buttons button {
+    padding: 8px 20px; 
+    font-size: 14px;
+    background-color: #f8f8f8; /* Light background */
+    border: 1px solid #dcdcdc;  /* Light border */
+    border-radius: 5px;         /* Rounded corners */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for buttons */
+.search-buttons button:hover {
+    background-color: #e0e0e0; /* Change background color when hovering */
+}
+
+/* Footer styles */
+footer {
+    font-family: Arial, sans-serif;
+    padding: 8px 8px; /* Adjusted padding for smaller footer height */
+    background-color: #efeded;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    margin-bottom: 0; /* No margin at the bottom */
+}
+
+/* Footer content adjustment */
+.footer-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; /* Aligns the "Bangladesh" text to the top */
+}
+
+.bangladesh {
+    font-size: 10px; 
+    font-weight: bold;
+    color: Black;
+}
+
+.divider {
+    margin: 5px 0;
+    border: 0;
+    border-top: 1px solid Black;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-links, .right-links {
+    display: flex;
+    gap: 7px;
+}
+
+.left-links a, .right-links a {
+    text-decoration: none;
+    color: Black;
+    font-size: 10px;
+}
+
+.left-links a:hover, .right-links a:hover {
+    text-decoration: underline;
+}
+
+/* Make sure footer links and other elements are flexible */
+.footer-top,
+.footer-links,
+.left-links,
+.right-links {
+    flex-wrap: wrap; /* Allow wrapping to ensure the content stays within boundaries */
+}
+
+@media (max-width: 450px) {
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Create two equal-width columns */
+        gap: 10px; /* Space between columns */
+        width: 100%; /* Ensure the container takes up full width */
+    }
+
+    .left-links {
+        display: flex;
+        flex-direction: column; /* Stack the links vertically in one column */
+        gap: 5px; /* Space between links */
+        justify-content: flex-start; /* Align left links to the top */
+    }
+
+    .right-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Align right links to the right */
+        text-align: right; /* Ensure the text is aligned to the right */
+        gap: 5px; /* Space between links */
+    }
+
+    .left-links a, .right-links a {
+        font-size: 8px; /* Reduce font size for small screens */
+    }
+
+    .footer-top {
+        display: block; /* Stack the Bangladesh text vertically */
+    }
+
+    .bangladesh {
+        font-size: 8px; /* Adjust font size for smaller screens */
+        font-weight: bold;
+        color: Black;
+    }
+}
+
